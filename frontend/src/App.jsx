@@ -22,7 +22,7 @@ function App() {
     const fetchLeads = async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/api/leads?page=${page}&limit=${limit}&search=${search}`
+          `https://lead-management-dashboard.onrender.com/api/leads?page=${page}&limit=${limit}&search=${search}`
         );
         const data = await res.json();
         setLeads(data.leads || []);
@@ -43,7 +43,7 @@ function App() {
 
     const fetchAnalytics = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/leads/analytics');
+        const res = await fetch('https://lead-management-dashboard.onrender.com/api/leads/analytics');
         const data = await res.json();
         setAnalytics(data);
       } catch (err) {
